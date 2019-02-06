@@ -1,0 +1,48 @@
+
+
+<!doctype html >
+  <html ng-app='myApp'>
+      
+      <head>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.js"></script>
+        <script src="./app.js"></script>
+        <script src="./babyComponent.js"></script>
+        <script src="./parentComponent.js"></script>
+        <script src="./getDBComponent.js"></script>
+
+      </head>
+
+      <body >
+       <h1>ng Component boilerplate</h1>
+       <hr>
+       
+
+
+          <parent-component name='Parent'>
+
+            <baby-component name='Brian'></baby-component>
+            <br>
+            <baby-component name='Clare'></baby-component>
+            
+          </parent-component>
+
+          <hr>
+       
+          <getdb-component val= '100' obj="{'key': 'value'}" array = "[{'a':1},{'a':2}]" url='https://www.thedoctorr.com/retrieveDB'> 
+           
+           <h2> getDB component</h2>
+          </getdb-component>
+          
+
+
+       
+        
+      </body>
+ </html>
+
+
+
+<script type="text/javascript">
+ 
+      
+</script>
