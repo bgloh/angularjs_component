@@ -1,7 +1,7 @@
    'use strict'
 
 
-    var app = angular.module('myApp',[]);
+    var app = angular.module('myApp',['postFactory','ngResource']);
 
     // csrf configuration
     app.config(['$httpProvider', function($httpProvider) {

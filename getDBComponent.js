@@ -1,10 +1,13 @@
 
- var getdbCtrl = function($http){
+ var getdbCtrl = function($http,postService){
   var ctrl = this;
   var dbData = [];
   ctrl.dbShow = false;
   ctrl.dbData = dbData;
   
+  // ngResource test; dispaly name of phone for array[0]
+  var resource = postService.get(function(r){console.log(r[0].fields)});
+  //console.log(resource);
 
   // DB URL
   //ctrl.url = 'https://www.thedoctorr.com/retrieveDB';
@@ -50,7 +53,7 @@ getdbTemplate = '<ng-transclude></ng-transclude>' +
                 
 
 app
-.controller('getdbCtrl', ['$http', getdbCtrl])
+.controller('getdbCtrl', ['$http','postService', getdbCtrl])
 .component('getdbComponent',{
               template: getdbTemplate,
               controller: getdbCtrl,
